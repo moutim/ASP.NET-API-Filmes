@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vitor\\Documents\\EstagiariosAPI\\EstagiariosAPI\\EstagiariosAPI.csproj": {}
+    "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\EstagiariosAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vitor\\Documents\\EstagiariosAPI\\EstagiariosAPI\\EstagiariosAPI.csproj": {
+    "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\EstagiariosAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vitor\\Documents\\EstagiariosAPI\\EstagiariosAPI\\EstagiariosAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\EstagiariosAPI.csproj",
         "projectName": "EstagiariosAPI",
-        "projectPath": "C:\\Users\\Vitor\\Documents\\EstagiariosAPI\\EstagiariosAPI\\EstagiariosAPI.csproj",
+        "projectPath": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\EstagiariosAPI.csproj",
         "packagesPath": "C:\\Users\\Vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vitor\\Documents\\EstagiariosAPI\\EstagiariosAPI\\obj\\",
+        "outputPath": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",

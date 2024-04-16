@@ -40,34 +40,10 @@ namespace EstagiariosAPI.Controllers
 
             if (user.Count() == 0)
             {
-                return NotFound(new ErrorMessage($"Não existe usuário cadastrado com id {id}."));
+                return NotFound(new Message($"Não existe usuário cadastrado com id {id}."));
             }
 
             return Ok(user);
-        }
-
-        [HttpPost("Criar")]
-        public async Task<IActionResult> CreateUser(CreateUsuario bodyUsuario)
-        {
-            Usuario usuario = new()
-            {
-                Nome = bodyUsuario.Nome,
-                Sobrenome = bodyUsuario.Sobrenome,
-                Email = bodyUsuario.Email,
-                Senha = bodyUsuario.Senha
-            };
-
-            var checkUsuario = _dbContext.Usuarios.Where(u => u.Email == usuario.Email);
-
-            if (checkUsuario.Any())
-            {
-                return Conflict(new ErrorMessage("Já existe usário cadastrado com esse email!"));
-            }
-
-            _dbContext.Usuarios.Add(usuario);
-            await _dbContext.SaveChangesAsync();
-
-            return Ok("Usuário cadastrado com sucesso!");
         }
 
         [HttpGet("WatchList/{id}")]
@@ -79,7 +55,7 @@ namespace EstagiariosAPI.Controllers
 
             if (user == null)
             {
-                return NotFound(new ErrorMessage("Ainda não existem filmes cadastrados na sua WatchList."));
+                return NotFound(new Message("Ainda não existem filmes cadastrados na sua WatchList."));
             }
 
             var userModel = user.FilmesWatchList.Select(item => new UserMovieList
@@ -102,7 +78,7 @@ namespace EstagiariosAPI.Controllers
 
             if (user == null)
             {
-                return NotFound(new ErrorMessage("Ainda não existem filmes cadastrados na sua lista de Vistos."));
+                return NotFound(new Message("Ainda não existem filmes cadastrados na sua lista de Vistos."));
             }
 
             var userModel = user.Filmes.Select(item => new UserMovieList
@@ -114,6 +90,65 @@ namespace EstagiariosAPI.Controllers
             });
 
             return Ok(userModel);
+        }
+
+        [HttpPost("Criar")]
+        public async Task<IActionResult> CreateUser(CreateUsuario bodyUsuario)
+        {
+            Usuario usuario = new()
+            {
+                Nome = bodyUsuario.Nome,
+                Sobrenome = bodyUsuario.Sobrenome,
+                Email = bodyUsuario.Email,
+                Senha = bodyUsuario.Senha
+            };
+
+            var checkUsuario = _dbContext.Usuarios.Where(u => u.Email == usuario.Email);
+
+            if (checkUsuario.Any())
+            {
+                return Conflict(new Message("Já existe usário cadastrado com esse email!"));
+            }
+
+            _dbContext.Usuarios.Add(usuario);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(new Message("Usuário cadastrado com sucesso!"));
+        }
+
+        [HttpDelete("Deletar/{id}")]
+        public async Task<IActionResult> DeleteUSer(int id)
+        {
+            var user = await _dbContext.Usuarios.FindAsync(id);
+
+            if (user == null)
+            {
+                return NotFound(new Message($"Não existe usuário cadastrado com id {id}."));
+            }
+
+            _dbContext.Usuarios.Remove(user);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(new Message("Usuário deletado com sucesso."));
+        }
+
+        [HttpPatch("Deletar/{id}")]
+        public async Task<IActionResult> UpdateUSer(int id, UpdateUSer bodyUsuario)
+        {
+            var user = await _dbContext.Usuarios.FindAsync(id);
+
+            if (user == null)
+            {
+                return NotFound(new Message($"Não existe usuário cadastrado com id {id}."));
+            }
+
+            user.Nome = !string.IsNullOrEmpty(bodyUsuario.Nome) ? bodyUsuario.Nome : user.Nome;
+            user.Sobrenome = !string.IsNullOrEmpty(bodyUsuario.Sobrenome) ? bodyUsuario.Sobrenome : user.Sobrenome;
+            user.Email = !string.IsNullOrEmpty(bodyUsuario.Email) ? bodyUsuario.Email : user.Email;
+            user.Senha = !string.IsNullOrEmpty(bodyUsuario.Senha) ? bodyUsuario.Senha : user.Senha;
+
+            await _dbContext.SaveChangesAsync();
+            return Ok(new Message("Usuário atualizado com sucesso!"));
         }
     }
 }

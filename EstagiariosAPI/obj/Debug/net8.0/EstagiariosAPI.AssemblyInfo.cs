@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstagiariosAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e93f28d4ef2e904b69fce1c189c4b57de0dbc5fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstagiariosAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstagiariosAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
