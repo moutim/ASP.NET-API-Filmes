@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|c:\\users\\vitor\\documents\\asp.net-api-filmes\\estagiariosapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|solutionrelative:estagiariosapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|c:\\users\\vitor\\documents\\asp.net-api-filmes\\estagiariosapi\\viewmodels\\loginsuccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|solutionrelative:estagiariosapi\\viewmodels\\loginsuccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginSuccess.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\ViewModels\\LoginSuccess.cs",
+              "RelativeDocumentMoniker": "EstagiariosAPI\\ViewModels\\LoginSuccess.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\ViewModels\\LoginSuccess.cs",
+              "RelativeToolTip": "EstagiariosAPI\\ViewModels\\LoginSuccess.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T14:00:22.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "EstagiariosAPI\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "EstagiariosAPI\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAzwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T13:35:16.398Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
