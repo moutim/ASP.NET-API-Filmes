@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|c:\\users\\vitor\\documents\\asp.net-api-filmes\\estagiariosapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|solutionrelative:estagiariosapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|c:\\users\\vitor\\documents\\asp.net-api-filmes\\estagiariosapi\\controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|solutionrelative:estagiariosapi\\controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|c:\\users\\vitor\\documents\\asp.net-api-filmes\\estagiariosapi\\viewmodels\\loginsuccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|solutionrelative:estagiariosapi\\viewmodels\\loginsuccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|c:\\users\\vitor\\documents\\asp.net-api-filmes\\estagiariosapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|solutionrelative:estagiariosapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|c:\\users\\vitor\\documents\\asp.net-api-filmes\\estagiariosapi\\viewmodels\\addmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|solutionrelative:estagiariosapi\\viewmodels\\addmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|c:\\users\\vitor\\documents\\asp.net-api-filmes\\estagiariosapi\\viewmodels\\watchlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B968C4D-01E0-454F-B3A5-670C65759DBC}|EstagiariosAPI\\EstagiariosAPI.csproj|solutionrelative:estagiariosapi\\viewmodels\\watchlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginSuccess.cs",
-              "DocumentMoniker": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\ViewModels\\LoginSuccess.cs",
-              "RelativeDocumentMoniker": "EstagiariosAPI\\ViewModels\\LoginSuccess.cs",
-              "ToolTip": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\ViewModels\\LoginSuccess.cs",
-              "RelativeToolTip": "EstagiariosAPI\\ViewModels\\LoginSuccess.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAdAAAA",
+              "DocumentIndex": 3,
+              "Title": "WatchList.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\ViewModels\\WatchList.cs",
+              "RelativeDocumentMoniker": "EstagiariosAPI\\ViewModels\\WatchList.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\ViewModels\\WatchList.cs",
+              "RelativeToolTip": "EstagiariosAPI\\ViewModels\\WatchList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T14:00:22.393Z",
+              "WhenOpened": "2024-04-16T15:29:49.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddMovie.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\ViewModels\\AddMovie.cs",
+              "RelativeDocumentMoniker": "EstagiariosAPI\\ViewModels\\AddMovie.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\ViewModels\\AddMovie.cs",
+              "RelativeToolTip": "EstagiariosAPI\\ViewModels\\AddMovie.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T15:23:20.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "EstagiariosAPI\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "EstagiariosAPI\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAkwF8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T14:26:47.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "EstagiariosAPI\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "EstagiariosAPI\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAzwBwAAAAAAAAA",
+              "Title": "WatchlistController.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\Controllers\\WatchlistController.cs",
+              "RelativeDocumentMoniker": "EstagiariosAPI\\Controllers\\WatchlistController.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Documents\\ASP.NET-API-Filmes\\EstagiariosAPI\\Controllers\\WatchlistController.cs",
+              "RelativeToolTip": "EstagiariosAPI\\Controllers\\WatchlistController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAYwDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T13:35:16.398Z",
+              "WhenOpened": "2024-04-16T14:04:57.563Z",
               "EditorCaption": ""
             }
           ]

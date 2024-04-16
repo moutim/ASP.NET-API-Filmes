@@ -19,11 +19,11 @@ namespace EstagiariosAPI.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet("Infos/{id}")]
+        [HttpGet("Infos/{userId}")]
 
-        public async Task<IActionResult> GetUserInfoById(int id)
+        public async Task<IActionResult> GetUserInfoById(int userId)
         {
-            var user = _dbContext.Usuarios.Where(u => u.Id == id).Select(u => new UserInfo
+            var user = _dbContext.Usuarios.Where(u => u.Id == userId).Select(u => new UserInfo
             {
                 Id = u.Id,
                 Nome = u.Nome,
@@ -40,18 +40,18 @@ namespace EstagiariosAPI.Controllers
 
             if (user.Count() == 0)
             {
-                return NotFound(new Message($"Não existe usuário cadastrado com id {id}."));
+                return NotFound(new Message($"Não existe usuário cadastrado com id {userId}."));
             }
 
             return Ok(user);
         }
 
-        [HttpGet("WatchList/{id}")]
-        public async Task<IActionResult> GetUserWatchList(int id)
+        [HttpGet("WatchList/{userId}")]
+        public async Task<IActionResult> GetUserWatchList(int userId)
         {
             var user = _dbContext.Usuarios
                 .Include(u => u.FilmesWatchList)
-                .FirstOrDefault(u => u.Id == id);
+                .FirstOrDefault(u => u.Id == userId);
 
             if (user == null)
             {
@@ -69,12 +69,12 @@ namespace EstagiariosAPI.Controllers
             return Ok(userModel);
         }
 
-        [HttpGet("Vistos/{id}")]
-        public async Task<IActionResult> GetUserVistos(int id)
+        [HttpGet("Vistos/{userId}")]
+        public async Task<IActionResult> GetUserVistos(int userId)
         {
             var user = _dbContext.Usuarios
                 .Include(u => u.Filmes)
-                .FirstOrDefault(u => u.Id == id);
+                .FirstOrDefault(u => u.Id == userId);
 
             if (user == null)
             {
@@ -116,14 +116,14 @@ namespace EstagiariosAPI.Controllers
             return Ok(new Message("Usuário cadastrado com sucesso!"));
         }
 
-        [HttpDelete("Deletar/{id}")]
-        public async Task<IActionResult> DeleteUSer(int id)
+        [HttpDelete("Deletar/{userId}")]
+        public async Task<IActionResult> DeleteUSer(int userId)
         {
-            var user = await _dbContext.Usuarios.FindAsync(id);
+            var user = await _dbContext.Usuarios.FindAsync(userId);
 
             if (user == null)
             {
-                return NotFound(new Message($"Não existe usuário cadastrado com id {id}."));
+                return NotFound(new Message($"Não existe usuário cadastrado com id {userId}."));
             }
 
             _dbContext.Usuarios.Remove(user);
@@ -132,14 +132,14 @@ namespace EstagiariosAPI.Controllers
             return Ok(new Message("Usuário deletado com sucesso."));
         }
 
-        [HttpPatch("Deletar/{id}")]
-        public async Task<IActionResult> UpdateUSer(int id, UpdateUSer bodyUsuario)
+        [HttpPatch("Deletar/{userId}")]
+        public async Task<IActionResult> UpdateUSer(int userId, UpdateUSer bodyUsuario)
         {
-            var user = await _dbContext.Usuarios.FindAsync(id);
+            var user = await _dbContext.Usuarios.FindAsync(userId);
 
             if (user == null)
             {
-                return NotFound(new Message($"Não existe usuário cadastrado com id {id}."));
+                return NotFound(new Message($"Não existe usuário cadastrado com id {userId}."));
             }
 
             user.Nome = !string.IsNullOrEmpty(bodyUsuario.Nome) ? bodyUsuario.Nome : user.Nome;

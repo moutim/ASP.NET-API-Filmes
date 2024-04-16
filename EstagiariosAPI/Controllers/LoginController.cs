@@ -24,12 +24,12 @@ namespace EstagiariosAPI.Controllers
 
             if (user == null)
             {
-                return NotFound(new Message("Não existe usuário cadastrado com esse email."));
+                return NotFound(new Message("Email ou senha incorreto."));
             }
 
             if (user.Senha != body.Senha)
             {
-                return Unauthorized(new Message("Senha incorreta!"));
+                return Unauthorized(new Message("Email ou senha incorreto."));
             }
 
             return Ok(new LoginSuccess
