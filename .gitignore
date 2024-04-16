@@ -1,1 +1,102 @@
 .vs/
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/bin
+**/obj
+
+# Visual Studio
+.vs/
+*.bak
+*.vsp
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.dll
+*.lib
+*.sbr
+*.sdf
+*.idb
+*.pdb
+*.ipch/
+*.obj/
+*.pch
+*.vspscc
+*.vssscc
+.builds/
+*.pidb
+*.svclog
+*.scc
+*.tss
+*.psess
+*.vsp
+*.vspx
+*.user
+*.psess
+*.vspx
+*.sap
+*.suo
+*.cache
+*.vc.db
+*.vspscc
+*.sqlite3
+*.sqlite
+*.sqlite3-journal
+*.sqlite-journal
+*.pdb
+*.opendb
+*.orig
+*.freeproj
+
+# Rider
+.idea/
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Windows image file caches
+T

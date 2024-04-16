@@ -20,7 +20,6 @@ namespace EstagiariosAPI.Controllers
         }
 
         [HttpGet("Infos/{userId}")]
-
         public async Task<IActionResult> GetUserInfoById(int userId)
         {
             var user = _dbContext.Usuarios.Where(u => u.Id == userId).Select(u => new UserInfo
@@ -29,13 +28,13 @@ namespace EstagiariosAPI.Controllers
                 Nome = u.Nome,
                 Sobrenome = u.Sobrenome,
                 Email = u.Email,
-                FilmeFavorito = new UserMovieList
+                FilmeFavorito = u.Filme != null ? new UserMovieList
                 {
                     Id = u.Filme.Id,
                     Nome = u.Filme.Nome,
                     IdAPI = u.Filme.IdAPI,
                     BackdropPath = u.Filme.BackdropPath
-                }
+                } : null
             });
 
             if (user.Count() == 0)
@@ -132,7 +131,7 @@ namespace EstagiariosAPI.Controllers
             return Ok(new Message("Usuário deletado com sucesso."));
         }
 
-        [HttpPatch("Deletar/{userId}")]
+        [HttpPatch("Atualizar/{userId}")]
         public async Task<IActionResult> UpdateUSer(int userId, UpdateUSer bodyUsuario)
         {
             var user = await _dbContext.Usuarios.FindAsync(userId);
