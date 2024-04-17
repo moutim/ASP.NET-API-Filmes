@@ -16,8 +16,6 @@ namespace EstagiariosAPI.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private static readonly SymmetricSecurityKey TokenSecret = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Js4YoIXHVV0cTmZZ"));
-        private static readonly TimeSpan TokenLifeTime = TimeSpan.FromHours(12);
         private readonly DatabaseContext _dbContext;
         private readonly IConfiguration _configuration;
 

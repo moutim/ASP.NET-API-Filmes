@@ -1,6 +1,7 @@
 ﻿using EstagiariosAPI.Database;
 using EstagiariosAPI.Entities;
 using EstagiariosAPI.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,7 @@ namespace EstagiariosAPI.Controllers
             _dbContext = dbContext;
         }
 
+        [Authorize]
         [HttpPost("Adicionar/{userId}")]
         public async Task<IActionResult> AddMovieInWatchList(int userId, AddMovie body)
         {
@@ -37,6 +39,7 @@ namespace EstagiariosAPI.Controllers
             return Ok(new Message("Filme adicionado com sucesso!"));
         }
 
+        [Authorize]
         [HttpDelete("Deletar/{userId}/{movieId}")]
         public async Task<IActionResult> RemoveMovieInWatchList(int userId, int movieId)
         {

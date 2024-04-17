@@ -47,6 +47,7 @@ namespace EstagiariosAPI.Controllers
             return Ok(user);
         }
 
+        [Authorize]
         [HttpGet("WatchList/{userId}")]
         public async Task<IActionResult> GetUserWatchList(int userId)
         {
@@ -70,6 +71,7 @@ namespace EstagiariosAPI.Controllers
             return Ok(userModel);
         }
 
+        [Authorize]
         [HttpGet("Vistos/{userId}")]
         public async Task<IActionResult> GetUserVistos(int userId)
         {
@@ -93,30 +95,7 @@ namespace EstagiariosAPI.Controllers
             return Ok(userModel);
         }
 
-        [HttpPost("Criar")]
-        public async Task<IActionResult> CreateUser(CreateUsuario bodyUsuario)
-        {
-            Usuario usuario = new()
-            {
-                Nome = bodyUsuario.Nome,
-                Sobrenome = bodyUsuario.Sobrenome,
-                Email = bodyUsuario.Email,
-                Senha = bodyUsuario.Senha
-            };
-
-            var checkUsuario = _dbContext.Usuarios.Where(u => u.Email == usuario.Email);
-
-            if (checkUsuario.Any())
-            {
-                return Conflict(new Message("Já existe usário cadastrado com esse email!"));
-            }
-
-            _dbContext.Usuarios.Add(usuario);
-            await _dbContext.SaveChangesAsync();
-
-            return Ok(new Message("Usuário cadastrado com sucesso!"));
-        }
-
+        [Authorize]
         [HttpDelete("Deletar/{userId}")]
         public async Task<IActionResult> DeleteUSer(int userId)
         {
@@ -133,6 +112,7 @@ namespace EstagiariosAPI.Controllers
             return Ok(new Message("Usuário deletado com sucesso."));
         }
 
+        [Authorize]
         [HttpPatch("Atualizar/{userId}")]
         public async Task<IActionResult> UpdateUSer(int userId, UpdateUSer bodyUsuario)
         {
