@@ -2,6 +2,7 @@
 using EstagiariosAPI.Entities;
 using EstagiariosAPI.Models;
 using EstagiariosAPI.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,7 @@ namespace EstagiariosAPI.Controllers
             _dbContext = dbContext;
         }
 
+        [Authorize]
         [HttpGet("Infos/{userId}")]
         public async Task<IActionResult> GetUserInfoById(int userId)
         {
