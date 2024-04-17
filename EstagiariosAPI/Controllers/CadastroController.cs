@@ -10,11 +10,11 @@ namespace EstagiariosAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RegistroController : ControllerBase
+    public class CadastroController : ControllerBase
     {
         private readonly DatabaseContext _dbContext;
 
-        public RegistroController(DatabaseContext dbContext)
+        public CadastroController(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }

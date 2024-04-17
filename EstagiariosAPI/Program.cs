@@ -44,7 +44,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     var securitySchema = new OpenApiSecurityScheme
     {
-        Description = "JWT Authorization header using the Bearer scheme.",
+        Description = "Autenticação JWT",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
