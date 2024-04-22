@@ -1,0 +1,9 @@
+
+{
+    "region" : "sa-east-1",
+    "profile" : "default",
+    "configuration" : "Release",
+    "image-tag"     : "api-movies:latest",
+    "docker-build-working-dir" : "",
+    "vstoolkit-deployment-mode" : "PushOnly"
+}
