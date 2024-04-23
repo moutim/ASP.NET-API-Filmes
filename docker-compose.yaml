@@ -3,9 +3,7 @@ version: '3.8'
 services:
   estagiarios-api:
     image: estagiarios-api
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     ports:
       - "8080:8080"
       - "8081:8081"
