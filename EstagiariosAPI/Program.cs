@@ -76,7 +76,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 var app = builder.Build();
 
 // Configuração para tentar rodar no Railway
-app.Run("http://0.0.0.0:" + configuration["PORT"]);
+// app.Run("http://0.0.0.0:" + configuration["PORT"]);
 
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
