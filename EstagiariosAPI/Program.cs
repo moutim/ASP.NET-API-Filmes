@@ -73,11 +73,6 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 });
 
-builder.Host.ConfigureWebHostDefaults(webBuilder =>
-{
-    webBuilder.UseUrls("http://*:8080", "http://*:8081");
-});
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
