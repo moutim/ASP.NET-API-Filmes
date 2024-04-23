@@ -78,12 +78,24 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{
-    
+
 //}
 
+string myApiVersion = "v1";
+string myAppName = "EstagiariosAPI";
+string swaggerVersion = "4.15.5";
 app.UseSwagger();
 
-app.UseSwaggerUI();
+string pkgUrl = "https://unpkg.com/swagger-ui-dist@";
+app.UseSwaggerUI(c => {
+    c.HeadContent =
+        $"<link rel=\"stylesheet\" type=\"text/css\" " +
+        $"href=\"{pkgUrl}{swaggerVersion}/swagger-ui.css\" />";
+    c.InjectStylesheet($"{pkgUrl}{swaggerVersion}/swagger-ui.css", "text/css");
+    c.InjectJavascript($"{pkgUrl}{swaggerVersion}/swagger-ui-standalone-preset.js", "text/javascript");
+    c.InjectJavascript($"{pkgUrl}{swaggerVersion}/swagger-ui-bundle.js", "text/javascript");
+    c.SwaggerEndpoint($"/swagger/{myApiVersion}/swagger.json", myAppName);
+});
 
 app.UseHttpsRedirection();
 
