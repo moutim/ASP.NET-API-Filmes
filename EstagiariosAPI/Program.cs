@@ -104,16 +104,10 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAnyOrigin",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                   .AllowAnyHeader()
-                   .AllowAnyMethod();
-        });
-});
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 app.UseAuthorization();
 
