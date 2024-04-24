@@ -13,7 +13,7 @@ using System.Text;
 
 namespace EstagiariosAPI.Controllers
 {
-    [EnableCors]
+    [EnableCors("AllowAnyOrigin")]
     [Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase

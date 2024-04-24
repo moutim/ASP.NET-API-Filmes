@@ -71,18 +71,7 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-});
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAnyOrigin",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                   .AllowAnyHeader()
-                   .AllowAnyMethod();
-        });
-});
+}); 
 
 var app = builder.Build();
 
@@ -114,6 +103,17 @@ app.UseSwaggerUI(c => {
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAnyOrigin",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
 
 app.UseAuthorization();
 
